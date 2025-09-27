@@ -27,6 +27,5 @@ requests
 speedtest-cli
 telethon
 tgcrypto
-bson
 python-telegram-bot
 pyrogram
