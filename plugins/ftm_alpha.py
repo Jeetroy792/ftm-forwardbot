@@ -1,0 +1,1 @@
+# This file has been removed as Alpha mode is no longer supported
