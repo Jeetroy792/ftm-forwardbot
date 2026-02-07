@@ -1,0 +1,17 @@
+# পাইথন ইমেজ ব্যবহার করা হচ্ছে
+FROM python:3.10-slim-buster
+
+# ওয়ার্কিং ডিরেক্টরি সেট করা
+WORKDIR /app
+
+# সিস্টেম ডিপেন্ডেন্সি ইনস্টল (প্রয়োজন হলে)
+RUN apt-get update && apt-get install -y git
+
+# ফাইলগুলো কপি করা
+COPY . .
+
+# লাইব্রেরি ইনস্টল করা
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# বট রান করার কমান্ড
+CMD ["python3", "main.py"]
